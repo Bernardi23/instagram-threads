@@ -1,16 +1,27 @@
-# instagram_threads
+# Instagram's Threads flutter remake 
 
-A new Flutter project.
+This is a remake of Instagram's new app: Threads done with flutter.
 
-## Getting Started
+## Original vs Flutter
+|![original](https://lh3.googleusercontent.com/SN4vqCYgYeElZ1UpLhkDeX_nuhBm38duWDrbsneWFYChDBlDNbRp4XY1ahTucOdiXg=w1270-h791-rw =250x)|![Threads from Instagram done with Flutter](https://i.imgur.com/ePq9n0o.png =250x) |
+|--|--|
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+   ## Features
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- [ ] Chats Page
+	- [x] Static design
+	- [ ] Bottom sheet
+	- [ ] Animations
+		- [x] Pull up for camera
+ 		- [ ] Chat left and right slide
+		- [ ] Open conversation
+		- [ ] Close conversation
+- [ ] Camera page
+	- [ ] Static design
+	- [ ] Gallery Opener from bottom slide
+	- [ ] Animations
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+

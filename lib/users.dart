@@ -33,7 +33,7 @@ final users = [
     lastmsg: "Sounds good",
     notification: true,
     hasStory: true,
-    hasSeenStory: true,
+    hasSeenStory: false,
   ),
   User(
       username: "_christysilva",

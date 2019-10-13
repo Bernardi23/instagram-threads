@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import '../../users.dart';
 import 'components.dart';
 
@@ -21,7 +22,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     // Animation Controller
     _ac = AnimationController(duration: Duration(milliseconds: 300), vsync: this);
     // Padding
-    _padding = 40;
+    _padding = 20;
     // Animated padding
     _aPadding = Tween<double>(
       begin: _padding,
@@ -40,7 +41,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       if (_sc.offset < 0) {
         setState(() {
           _scroll = _sc.offset;
-          final padding = _sc.offset.abs() / 50 < 1 ? 40 + 10 * (_sc.offset.abs() / 50) : 50.0;
+          final padding = _sc.offset.abs() / 50 < 1 ? 20 + 15 * (_sc.offset.abs() / 50) : 35.0;
           _padding = padding;
         });
       }
@@ -62,21 +63,27 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
           physics: BouncingScrollPhysics(),
           itemCount: users.length,
           itemBuilder: (ctx, i) {
+            final headerOpacity = _sc.offset < 60 ? 1 * (1 - _sc.offset / 60) : 0.0;
             final user = users[i];
             return AnimatedBuilder(
               animation: _ac,
               child: (i == 0)
-                  ? Header(
-                      user: user,
-                      scroll: _scroll,
-                      isScrolling: _isScrolling,
-                      cameraActivated: _sc.offset.abs() / 50 >= 1,
+                  ? Opacity(
+                      opacity: (_sc.offset <= 10) ? 1 : headerOpacity,
+                      child: Header(
+                        user: user,
+                        scroll: _scroll,
+                        isScrolling: _isScrolling,
+                        cameraActivated: _sc.offset.abs() / 50 >= 1,
+                      ),
                     )
                   : Chat(user: user),
               builder: (context, child) {
                 return Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: (i == 0) ? 30 : 20,
+                  padding: EdgeInsets.only(
+                    left: (i == 0) ? 25 : 25,
+                    right: (i == 0) ? 25 : 25,
+                    top: 20,
                   ),
                   child: Column(
                     children: <Widget>[

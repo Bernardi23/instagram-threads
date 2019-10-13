@@ -2,12 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:instagram_threads/pages/homepage/homepage.dart';
 
-void main() => runApp(Threads());
+void main() {
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
+    statusBarColor: Colors.white,
+    systemNavigationBarColor: Colors.white,
+  ));
+  runApp(Threads());
+}
 
 class Threads extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(statusBarColor: Colors.white));
     return MaterialApp(
       title: 'Instagram Threads',
       theme: threadsTheme(),
@@ -28,10 +33,10 @@ ThemeData threadsTheme() {
     // Active Green
     accentColor: Color(0xFF5EE747),
     textTheme: TextTheme(
-      body1: TextStyle(fontSize: 15),
-      subhead: TextStyle(fontWeight: FontWeight.bold),
+      body1: TextStyle(fontSize: 18),
+      subhead: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
       subtitle: TextStyle(
-        fontSize: 12.0,
+        fontSize: 13.0,
         color: Color(0xFF919191),
       ),
     ),

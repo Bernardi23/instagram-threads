@@ -1,6 +1,8 @@
 import 'dart:math';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../../users.dart';
 
@@ -24,8 +26,8 @@ class Header extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Container(
-          width: 40,
-          height: 40,
+          width: 50,
+          height: 50,
           child: Icon(Icons.dehaze),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
@@ -64,7 +66,7 @@ class Chat extends StatelessWidget {
               user.username,
               style: Theme.of(context).textTheme.subhead,
             ),
-            SizedBox(height: 8),
+            SizedBox(height: 4),
             Text(
               user.lastmsg,
               style: TextStyle(
@@ -106,15 +108,15 @@ class Avatar extends StatelessWidget {
     return Stack(
       children: <Widget>[
         Container(
-          width: 70,
-          height: 70,
+          width: 80,
+          height: 80,
           padding: EdgeInsets.all(3),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             border: user.hasStory
                 ? Border.all(
-                    color: user.hasSeenStory ? Color(0xFF919191) : Theme.of(context).accentColor,
-                    width: 1,
+                    color: user.hasSeenStory ? Color(0x77919191) : Theme.of(context).accentColor,
+                    width: 2,
                   )
                 : Border.all(color: Colors.transparent),
           ),
@@ -177,8 +179,6 @@ class _HeaderButtonState extends State<HeaderButton> with TickerProviderStateMix
 
   @override
   void initState() {
-    // Border Animation
-
     // Camera activate Animation
     _ac = AnimationController(
       vsync: this,
@@ -214,8 +214,8 @@ class _HeaderButtonState extends State<HeaderButton> with TickerProviderStateMix
             Opacity(
               opacity: actualScroll,
               child: Container(
-                width: 45,
-                height: 45,
+                width: 55,
+                height: 55,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: Colors.grey[400],
@@ -228,24 +228,24 @@ class _HeaderButtonState extends State<HeaderButton> with TickerProviderStateMix
               ),
             ),
             Container(
-              width: 40,
-              height: 40,
+              width: 50,
+              height: 50,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: Colors.white,
               ),
             ),
             Container(
-              width: 40,
-              height: 40,
+              width: 50,
+              height: 50,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: _buttonColor.value,
               ),
             ),
             Container(
-              width: 40,
-              height: 40,
+              width: 50,
+              height: 50,
               child: Icon(
                 Icons.camera_alt,
                 color: _iconColor.value,
@@ -271,7 +271,7 @@ class ButtonBorderPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     final paint = Paint()..color = Colors.black;
     canvas.drawArc(
-      Rect.fromCircle(center: Offset(0, 0), radius: 45 / 2),
+      Rect.fromCircle(center: Offset(0, 0), radius: 55 / 2),
       (progression < 1) ? (1.5 - progression) * pi : 0,
       (progression < 1) ? progression * 2 * pi : 2 * pi,
       true,
