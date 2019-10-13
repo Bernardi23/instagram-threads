@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import '../../users.dart';
-import 'components.dart';
+import 'components/_components.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -22,7 +21,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     // Animation Controller
     _ac = AnimationController(duration: Duration(milliseconds: 300), vsync: this);
     // Padding
-    _padding = 20;
+    _padding = 10;
     // Animated padding
     _aPadding = Tween<double>(
       begin: _padding,
@@ -41,7 +40,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       if (_sc.offset < 0) {
         setState(() {
           _scroll = _sc.offset;
-          final padding = _sc.offset.abs() / 50 < 1 ? 20 + 15 * (_sc.offset.abs() / 50) : 35.0;
+          final padding = _sc.offset.abs() / 50 < 1 ? 10 + 15 * (_sc.offset.abs() / 50) : 25.0;
           _padding = padding;
         });
       }
@@ -81,9 +80,9 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
               builder: (context, child) {
                 return Padding(
                   padding: EdgeInsets.only(
-                    left: (i == 0) ? 25 : 25,
-                    right: (i == 0) ? 25 : 25,
-                    top: 20,
+                    left: (i == 0) ? 25 : 0,
+                    right: (i == 0) ? 25 : 0,
+                    top: 10,
                   ),
                   child: Column(
                     children: <Widget>[
