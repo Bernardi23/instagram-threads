@@ -1,6 +1,6 @@
-# Instagram's Threads flutter remake 
+# Threads from Instagram flutter remake 
 
-This is a remake of Instagram's new app: Threads done with flutter.
+This is a remake of Instagram's new app: Threads, done with flutter.
 
 The app is really well designed with really good user interactivity (responsive and with a lot of simple animations). It took me one day of development to make the Chats page, which is probably the hardest part. This shows how fast you can develop with flutter while maintaining great design and performance. 
 
