@@ -1,4 +1,4 @@
-# Threads from Instagram flutter remake 
+# Threads from Instagram flutter remake 📸
 
 This is a remake of Instagram's new app: Threads, done with flutter.
 
@@ -10,11 +10,11 @@ Original             |  Flutter
 :-------------------------:|:-------------------------:
 <img src="https://lh3.googleusercontent.com/SN4vqCYgYeElZ1UpLhkDeX_nuhBm38duWDrbsneWFYChDBlDNbRp4XY1ahTucOdiXg=w1270-h791-rw" width="300" float="left" />|  <img src="https://i.imgur.com/ePq9n0o.png" width="300" float="right" />
 
-## Animations
+## Animations 🎞
 
 <img src="https://media.giphy.com/media/RGRoXS526Y6KcT5Jqz/giphy.gif" width="200" />
 
- ## Features
+ ## Features ✔
 - [ ] Chats Page
 	- [x] Static design
 	- [ ] Bottom sheet
