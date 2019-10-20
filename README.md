@@ -6,13 +6,19 @@ The app is really well designed with really good user interactivity (responsive 
 
 **Warning**: I'm not sure how well it'll perform on regular devices since I've only tried on my emulator, but there's a lot of tweaks I can make on the app to make it perform better. 
 
+<br>
+
 Original             |  Flutter
 :-------------------------:|:-------------------------:
-<img src="https://lh3.googleusercontent.com/SN4vqCYgYeElZ1UpLhkDeX_nuhBm38duWDrbsneWFYChDBlDNbRp4XY1ahTucOdiXg=w1270-h791-rw" width="300" float="left" />|  <img src="https://i.imgur.com/ePq9n0o.png" width="300" float="right" />
+<img src="https://lh3.googleusercontent.com/SN4vqCYgYeElZ1UpLhkDeX_nuhBm38duWDrbsneWFYChDBlDNbRp4XY1ahTucOdiXg=w1270-h791-rw" width="200" float="left" />|  <img src="https://i.imgur.com/ePq9n0o.png" width="200" float="right" />
+
+<br>
 
 ## Animations 🎞
 
 <img src="https://media.giphy.com/media/RGRoXS526Y6KcT5Jqz/giphy.gif" width="200" />
+
+<br>
 
  ## Features ✔
 - [ ] Chats Page
